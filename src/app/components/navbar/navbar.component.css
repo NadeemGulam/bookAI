@@ -1,0 +1,88 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+#auth-button, #profile-button, #logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-image: var(--gradient-1);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    #auth-button, #profile-button, #logout-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    #auth-button, #profile-button, #logout-button {
+        padding: 10px 0;
+    }
+}
